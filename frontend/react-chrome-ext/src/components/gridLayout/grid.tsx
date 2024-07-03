@@ -1,16 +1,26 @@
-import React from "react";
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import React, {ReactNode} from "react";
+import { Box } from "@mui/material";
 
-const ExContain = () => {
+interface JSXElement
+{
+    children: ReactNode;
+}
+
+
+
+const ExContain = ({ children }: JSXElement) => {
     return (
-        <Grid container spacing={1} sx={{ backgroundColor: 'purple' }}>
-            <Grid item lg={12} sx={{ textAlign: 'center' }}>
-                <Paper>xs=8</Paper>
-            </Grid>
-        </Grid>
-    );
+        <Box
+        height={300}
+        width={415}
+        display="flex"
+        alignItems="center"
+        p={2}
+        sx={{ border: '2px solid grey' }}
+      >
+        {children}
+      </Box>       
+      );
 }
 
 export default ExContain;
