@@ -11,7 +11,7 @@ interface JSXElement
 const ExContain = ({ children }: JSXElement) => {
     return (
         <Box
-        height={300}
+        height={270}
         width={415}
         display="flex"
         alignItems="center"
