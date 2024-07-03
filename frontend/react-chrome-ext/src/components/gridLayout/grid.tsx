@@ -15,7 +15,6 @@ const ExContain = ({ children }: JSXElement) => {
         width={415}
         display="flex"
         alignItems="center"
-        p={2}
         sx={{ border: '2px solid grey' }}
       >
         {children}
