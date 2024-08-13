@@ -1,11 +1,19 @@
 import React from 'react';
 import { Box } from '@mui/material';
+import Button from '@mui/material/Button';
+
 
 const Notifications = () => {
     return (
-        <Box sx={{ width: '100px', height: '100%'}}>
+        <div>
+            <h5>Notifcs </h5>
+            
+                <Button>One</Button>
+                <Button>Two</Button>
+                <Button>Three</Button>
+        </div>
         
-        </Box>
+        
     );
 };
 

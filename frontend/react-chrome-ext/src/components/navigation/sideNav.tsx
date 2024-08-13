@@ -4,9 +4,13 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import { Box, IconButton } from '@mui/material';
-import Drawer from '@mui/material/Drawer';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Profile from '../main-page-elements/profile/profile';
+import Notifications from '../main-page-elements/notifications/notifs';
+import Options from '../main-page-elements/options/options';
+import ListItemText from '@mui/material/ListItemText';
+import '../../styling/styles.css';
 
 const SideNav = () => {
     return (
@@ -15,24 +19,50 @@ const SideNav = () => {
             <IconButton>
                 <MenuIcon />
             </IconButton>  
+            
             <Divider />
-            <List>
-                <ListItem disablePadding>
-                    <ListItemButton>
-                        <ListItemText primary="Profile" />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                    <ListItemButton>
-                        <ListItemText primary="Notifications" />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                    <ListItemButton>
-                        <ListItemText primary="Options" />
-                    </ListItemButton>
-                </ListItem>
-            </List>
+                <BrowserRouter>
+                    
+                    <List>
+
+                        <ListItem disablePadding>
+                            <ListItemButton>
+                                <Link to='/profile' id="underline"><ListItemText primary='Profile'></ListItemText></Link> 
+                            </ListItemButton>
+                        </ListItem>
+
+                        <ListItem disablePadding>
+                            <ListItemButton>
+                                <Link to='/notifications'><ListItemText primary='Notifications'></ListItemText> </Link>
+                            </ListItemButton>
+                        </ListItem>
+
+                        <ListItem disablePadding>
+                            <ListItemButton>
+                            <Link to="options">
+                                <ListItemText primary="Options" />
+                            </Link>
+                            </ListItemButton>
+                        </ListItem>
+
+                    </List>
+
+                    <Routes>
+                        <Route
+                            path="/profile"
+                            element={<Profile />}
+                        ></Route>
+                        <Route
+                            path="/notifications"
+                            element={<Notifications />}
+                        ></Route>
+                        <Route
+                            path="/options"
+                            element={<Options />}
+                        ></Route>
+                    </Routes>
+
+                </BrowserRouter>
             <Divider />
         </Box>
     );
