@@ -1,21 +1,21 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { Select, MenuItem } from "@mui/material";
+import { useState } from "react";
+
 
 const Profile = () => {
-    const [age, setAge] = React.useState('');
+    const [language, setLanguage] = useState("");;
 
     const handleChange = (event) => {
-        setAge(event.target.value);
-    };
+        setLanguage(event.target.value);
+      };
 
     return (
         <div>
-            <Typography sx={{ textAlign: 'center' }} variant="h1" component="h5">
+            <Typography sx={{ textAlign: 'center' }} variant="h5" component="h5">
                 Profile
             </Typography>
 
@@ -28,22 +28,18 @@ const Profile = () => {
             </Typography>
 
             <div>
-                <Typography variant="subtitle1" gutterBottom>
-                    Language
-                </Typography>
 
                 <FormControl fullWidth>
                     <InputLabel id="language-select-label">Language</InputLabel>
                     <Select
-                        labelId="language-select-label"
-                        id="language-select"
-                        value={age}
-                        label="Language"
+                        value={language}
                         onChange={handleChange}
+                        
                     >
-                        <MenuItem value={10}>English</MenuItem>
-                        <MenuItem value={20}>Spanish</MenuItem>
-                        <MenuItem value={30}>French</MenuItem>
+                        <MenuItem value={1}>English</MenuItem>
+                        <MenuItem value={2}>Spanish</MenuItem>
+                        <MenuItem value={3}>Chinese</MenuItem>
+                        
                     </Select>
                 </FormControl>
             </div>

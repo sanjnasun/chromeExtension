@@ -17,33 +17,32 @@ const Options = () => {
 
     return (
         <div>
-        <h5>Options</h5>
         <FormControl>
                 <FormLabel>News Preferences</FormLabel>
                 <FormGroup row>
                     <FormControlLabel
                         label="Sports"
-                        control={<Checkbox value='sports' checked={options.includes('sports')} onChange={handleOptionChange} />} 
+                        control={<Checkbox color = 'secondary' value='sports' checked={options.includes('sports')} onChange={handleOptionChange} />} 
                     />
                 <FormControlLabel
                     label="Entertainment"
                     value = 'entertainment'
-                    control={<Checkbox checked={options.includes('entertainment')} onChange={handleOptionChange} />} 
+                    control={<Checkbox color = 'secondary' checked={options.includes('entertainment')} onChange={handleOptionChange} />} 
                     />
                 <FormControlLabel
                     label="USC"
                     value = 'usc'
-                    control={<Checkbox checked={options.includes('usc')} onChange={handleOptionChange} />}   
+                    control={<Checkbox color = 'secondary' checked={options.includes('usc')} onChange={handleOptionChange} />}   
                     />
                  <FormControlLabel
                     label="Politics"
                     value = 'politics'
-                    control={<Checkbox checked={options.includes('politics')} onChange={handleOptionChange} />}   
+                    control={<Checkbox color = 'secondary' checked={options.includes('politics')} onChange={handleOptionChange} />}   
                     />
                  <FormControlLabel
                     label="Stock"
                     value = 'stock'
-                    control={<Checkbox checked={options.includes('stock')} onChange={handleOptionChange} />}   
+                    control={<Checkbox color = 'secondary' checked={options.includes('stock')} onChange={handleOptionChange} />}   
                     />
 
                 </FormGroup>

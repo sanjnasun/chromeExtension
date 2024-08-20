@@ -2,3 +2,16 @@
 {
     text-decoration: 'none';
 }
+
+
+
+.side-nav{
+    background-color: #990001;
+}
+
+
+.names{
+    color: white;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
