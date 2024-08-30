@@ -4,30 +4,35 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import aang from '../notifications/aang.jpg';
+import { ArticleValues } from "../../../models/apimodel";
+import '../../../styling/styles.css';
 
 
-const NotifBox = () => {
+
+
+const NotifBox: React.FC<{article: ArticleValues}> = ({article}) => {
+  const{media_name, media_img} = article;
 
     return (
-        <Card sx={{ display: 'flex' }}>
-        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-          <CardContent sx={{ flex: '1 0 auto' }}>
-
-          <CardMedia
+        <Card sx={{ display: 'flex' }} className="cardVal">
+          <CardMedia 
           component="img"
-          sx={{ width: 60 }}
-          image={aang}
+          sx={{ width: 58, margin:2}}
+          image={media_img}
           alt="Live from space album cover"
         />
-            <Typography component="div" variant="h5">
-             Title
+        <Box textAlign='center' sx={{ display: 'flex', flexDirection: 'column' }} className="innerbox">
+          <CardContent sx={{ flex: '1 0 auto' }}>
+
+            <Typography align="left" variant="subtitle2" gutterBottom>
+             { media_name }
             </Typography>
             
           </CardContent>
         </Box>
-        
       </Card>
+
+
 
     )
 };

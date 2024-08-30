@@ -1,49 +1,31 @@
-import React from 'react';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
-import { Select, MenuItem } from "@mui/material";
-import { useState } from "react";
-import { userValues } from '../../../models/apimodel';
+import { UserValues } from '../../../models/apimodel';
+import userData from '../../../models/users.json';
+
+const userVal: UserValues = userData as UserValues;
 
 const Profile = () => {
-    const [language, setLanguage] = useState("");;
-
-    const handleChange = (event) => {
-        setLanguage(event.target.value);
-      };
-
     return (
-        <div>
-            <Typography sx={{ textAlign: 'center' }} variant="h5" component="h5">
+        <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+            textAlign="center"
+        >
+            <Typography variant="h5" gutterBottom>
                 Profile
             </Typography>
 
             <Typography variant="subtitle1" gutterBottom>
-                First name, Last Name
+                {userVal.userName_first} {userVal.userName_last}
             </Typography>
 
             <Typography variant="body1" gutterBottom>
-                Email
+                {userVal.user_email}
             </Typography>
-
-            <div>
-
-                <FormControl fullWidth>
-                    <InputLabel id="language-select-label">Language</InputLabel>
-                    <Select
-                        value={language}
-                        onChange={handleChange}
-                        
-                    >
-                        <MenuItem value={1}>English</MenuItem>
-                        <MenuItem value={2}>Spanish</MenuItem>
-                        <MenuItem value={3}>Chinese</MenuItem>
-                        
-                    </Select>
-                </FormControl>
-            </div>
-        </div>
+        </Box>
     );
 };
 

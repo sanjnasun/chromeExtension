@@ -1,0 +1,21 @@
+
+
+
+[
+    {
+      "user_id": 1,
+      "media_id": 15,
+      "link": "https://google.com",
+      "media_name": "USC Football team season begins this September",
+      "media_type_id": 5,
+      "media_img": "C:/Users/sanjna/Desktop/exten/chromeExtension/frontend/react-chrome-ext/src/components/main-page-elements/notifications/aang.jpg"
+    },
+    {
+        "user_id": 2,
+        "media_id": 16,
+        "link": "https://google.com",
+        "media_name": "USC men's tennis takes off",
+        "media_type_id": 4,
+        "media_img": "string"
+    }
+  ]
