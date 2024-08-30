@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Box, Checkbox, FormControlLabel, FormControl, FormLabel, FormGroup} from '@mui/material';
-
+import { Typography } from '@mui/material';
 const Options = () => {
     //a hook to create piece of state in the component 
     const[options, setOptions] = useState<string[]>([])
@@ -17,39 +17,50 @@ const Options = () => {
 
     return (
         <div>
-        <FormControl>
-                <FormLabel>News Preferences</FormLabel>
-                <FormGroup row>
-                    <FormControlLabel
-                        label="Sports"
-                        control={<Checkbox color = 'secondary' value='sports' checked={options.includes('sports')} onChange={handleOptionChange} />} 
-                    />
+           <Typography sx={{ textAlign: 'center', fontFamily: 'Libre Baskerville', marginTop:"0px"}} variant="h5" component="h5">
+                Options 
+            </Typography>
+            <Typography sx={{fontFamily: 'Arial', fontSize: 15, marginTop:"10px", marginLeft:"7px"}} variant="h5" component="h5">
+                Select your Preferred News Topics
+            </Typography>
+
+            <FormControl>
+            <FormGroup 
+                sx={{ 
+                    display: 'grid', 
+                    gridTemplateColumns: 'repeat(2, 1fr)', 
+                    marginLeft:2,
+                    gap: 1  // Adjust gap between items if needed
+                }} 
+            >
+                <FormControlLabel
+                    label="Sports"
+                    control={<Checkbox color='secondary' value='sports' checked={options.includes('sports')} onChange={handleOptionChange} />} 
+                />
                 <FormControlLabel
                     label="Entertainment"
-                    value = 'entertainment'
-                    control={<Checkbox color = 'secondary' checked={options.includes('entertainment')} onChange={handleOptionChange} />} 
-                    />
+                    value='entertainment'
+                    control={<Checkbox color='secondary' checked={options.includes('entertainment')} onChange={handleOptionChange} />} 
+                />
                 <FormControlLabel
                     label="USC"
-                    value = 'usc'
-                    control={<Checkbox color = 'secondary' checked={options.includes('usc')} onChange={handleOptionChange} />}   
-                    />
-                 <FormControlLabel
+                    value='usc'
+                    control={<Checkbox color='secondary' checked={options.includes('usc')} onChange={handleOptionChange} />}   
+                />
+                <FormControlLabel
                     label="Politics"
-                    value = 'politics'
-                    control={<Checkbox color = 'secondary' checked={options.includes('politics')} onChange={handleOptionChange} />}   
-                    />
-                 <FormControlLabel
-                    label="Stock"
-                    value = 'stock'
-                    control={<Checkbox color = 'secondary' checked={options.includes('stock')} onChange={handleOptionChange} />}   
-                    />
-
-                </FormGroup>
+                    value='politics'
+                    control={<Checkbox color='secondary' checked={options.includes('politics')} onChange={handleOptionChange} />}   
+                />
+                <FormControlLabel
+                    label="Technology/Science"
+                    value='technology/science'
+                    control={<Checkbox color='secondary' checked={options.includes('stock')} onChange={handleOptionChange} />}   
+                />
+            </FormGroup>
         </FormControl>
     </div>
-
-    );
+);
 };
 
 export default Options;

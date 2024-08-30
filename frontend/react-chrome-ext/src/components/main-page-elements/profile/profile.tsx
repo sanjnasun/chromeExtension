@@ -15,21 +15,21 @@ const Profile = () => {
 
     return (
         <div>
-            <Typography sx={{ textAlign: 'center' }} variant="h5" component="h5">
+            <Typography sx={{ textAlign: 'center', fontFamily: 'Libre Baskerville', marginTop: "-40px", marginLeft:"100px"}} variant="h5" component="h5">
                 Profile
             </Typography>
 
-            <Typography variant="subtitle1" gutterBottom>
+            <Typography sx={{marginLeft: "10px"}} variant="subtitle1" gutterBottom>
                 First name, Last Name
             </Typography>
 
-            <Typography variant="body1" gutterBottom>
+            <Typography sx={{marginLeft: "10px"}} variant="body1" gutterBottom>
                 Email
             </Typography>
 
             <div>
 
-                <FormControl fullWidth>
+                <FormControl fullWidth sx={{marginLeft: "10px"}}>
                     <InputLabel id="language-select-label">Language</InputLabel>
                     <Select
                         value={language}
