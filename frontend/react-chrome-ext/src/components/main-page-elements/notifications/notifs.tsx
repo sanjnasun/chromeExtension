@@ -12,9 +12,10 @@ const notif:ArticleValues[] = data;
 
 
     return (
-        <div>
-            <Typography align="center" variant="body1" gutterBottom>
-                Notifications
+        <div> 
+            <Typography align="center" sx={{ textAlign: 'center', fontFamily: 'Libre Baskerville'}} variant="body1" gutterBottom>
+
+            Notifications 
             </Typography>
             {notif.map((item) => (
                 <NotifBox

@@ -1,5 +1,3 @@
-// sideNav.js
-import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';

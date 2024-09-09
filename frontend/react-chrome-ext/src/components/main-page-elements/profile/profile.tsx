@@ -14,15 +14,15 @@ const Profile = () => {
             justifyContent="center"
             textAlign="center"
         >
-            <Typography variant="h5" gutterBottom>
-                Profile
+            <Typography sx={{ textAlign: 'center', fontFamily: 'Libre Baskerville', margin: 'auto'}} variant="h5" component="h5">
+            Profile
             </Typography>
 
-            <Typography variant="subtitle1" gutterBottom>
+            <Typography sx={{marginLeft: "10px"}} variant="subtitle1" gutterBottom>
                 {userVal.userName_first} {userVal.userName_last}
             </Typography>
 
-            <Typography variant="body1" gutterBottom>
+            <Typography sx={{marginLeft: "10px"}} variant="body1" gutterBottom>
                 {userVal.user_email}
             </Typography>
         </Box>
@@ -30,3 +30,7 @@ const Profile = () => {
 };
 
 export default Profile;
+
+
+
+
