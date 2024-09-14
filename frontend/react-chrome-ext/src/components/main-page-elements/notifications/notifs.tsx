@@ -1,4 +1,3 @@
-import React from 'react';
 import NotifBox from './notifBox';
 import data from '../../../models/data.json';
 import { ArticleValues } from "../../../models/apimodel";

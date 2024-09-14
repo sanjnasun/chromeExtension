@@ -5,8 +5,6 @@ export interface UserValues{ //for the user's profile info
     user_id: number,
 }
 
-
-
 export interface Preferences{ //options
     media_id: number,
     media_name: string,

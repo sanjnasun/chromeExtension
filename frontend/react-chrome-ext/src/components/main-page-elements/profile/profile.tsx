@@ -20,6 +20,7 @@ const Profile = () => {
 
             <Typography variant="subtitle1" gutterBottom>
                 {userVal.userName_first} {userVal.userName_last}
+                
             </Typography>
 
             <Typography variant="body1" gutterBottom>
