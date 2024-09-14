@@ -4,7 +4,7 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import { Select, MenuItem } from "@mui/material";
 import { useState } from "react";
-import { userValues } from '../../../models/apimodel';
+import { UserValues } from '../../../models/apimodel';
 
 const Profile = () => {
     const [language, setLanguage] = useState("");;
