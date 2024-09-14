@@ -1,3 +1,6 @@
+// sideNav.js
+import '../../styling/styles.css';
+import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -6,7 +9,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import { Box, IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
 import ListItemText from '@mui/material/ListItemText';
-import '../../styling/styles.css';
+
+
+
 
 const SideNav = () => {
   return (
@@ -18,7 +23,7 @@ const SideNav = () => {
       <List>
         <ListItem disablePadding>
           <ListItemButton component={Link} to='/profile'>
-            <ListItemText primary='Profile' className="names" />
+            <ListItemText primary='Profile' className="names"  />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>

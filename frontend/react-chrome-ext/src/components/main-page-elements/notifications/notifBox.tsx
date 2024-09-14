@@ -1,3 +1,4 @@
+import spiderman from '../notifications/spiderman.png';
 import React from "react";
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -35,6 +36,7 @@ const NotifBox: React.FC<{article: ArticleValues}> = ({article}) => {
 
 
     )
+    console.log(spiderman);
 };
 
 export default NotifBox;

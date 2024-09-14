@@ -1,7 +1,9 @@
-#underline
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&display=swap');
+
+/* #underline
 {
     text-decoration: 'none';
-}
+} */
 
 
 
@@ -13,6 +15,7 @@
 .names{
     color: white;
     text-decoration: none;
+<<<<<<< HEAD
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -34,4 +37,7 @@
     border-radius: 8%;
     background-color: beige;
     height: 30px;
+=======
+    font-family: 'Libre Baskerville', serif;
+>>>>>>> 4c61a1c28b2db0146c9e3970558d637417ab1fe9
 }

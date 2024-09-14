@@ -1,36 +1,50 @@
-import Box from '@mui/material/Box';
+import React from 'react';
 import Typography from '@mui/material/Typography';
-import { UserValues } from '../../../models/apimodel';
-import userData from '../../../models/users.json';
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import { Select, MenuItem } from "@mui/material";
+import { useState } from "react";
+import { userValues } from '../../../models/apimodel';
 
-const userVal: UserValues = userData as UserValues;
-//new chnages
 const Profile = () => {
+    const [language, setLanguage] = useState("");;
+
+    const handleChange = (event) => {
+        setLanguage(event.target.value);
+      };
+
     return (
-        <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            textAlign="center"
-        >
-            <Typography sx={{ textAlign: 'center', fontFamily: 'Libre Baskerville', margin: 'auto'}} variant="h5" component="h5">
-            Profile
+        <div>
+            <Typography sx={{ textAlign: 'center' }} variant="h5" component="h5">
+                Profile
             </Typography>
 
-            <Typography sx={{marginLeft: "10px"}} variant="subtitle1" gutterBottom>
-                {userVal.userName_first} {userVal.userName_last}
+            <Typography variant="subtitle1" gutterBottom>
+                First name, Last Name
             </Typography>
 
-            <Typography sx={{marginLeft: "10px"}} variant="body1" gutterBottom>
-                {userVal.user_email}
+            <Typography variant="body1" gutterBottom>
+                Email
             </Typography>
-        </Box>
+
+            <div>
+
+                <FormControl fullWidth>
+                    <InputLabel id="language-select-label">Language</InputLabel>
+                    <Select
+                        value={language}
+                        onChange={handleChange}
+                        
+                    >
+                        <MenuItem value={1}>English</MenuItem>
+                        <MenuItem value={2}>Spanish</MenuItem>
+                        <MenuItem value={3}>Chinese</MenuItem>
+                        
+                    </Select>
+                </FormControl>
+            </div>
+        </div>
     );
 };
 
 export default Profile;
-
-
-
-

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Box, Checkbox, FormControlLabel, FormControl, FormLabel, FormGroup} from '@mui/material';
+import { Checkbox, FormControlLabel, FormControl, FormGroup} from '@mui/material';
 import { Typography } from '@mui/material';
 const Options = () => {
     //a hook to create piece of state in the component 
