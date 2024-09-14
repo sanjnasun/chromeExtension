@@ -8,7 +8,7 @@
       "link": "https://google.com",
       "media_name": "USC Football team season begins this September",
       "media_type_id": 5,
-      "media_img": "C:/Users/sanjna/Desktop/exten/chromeExtension/frontend/react-chrome-ext/src/components/main-page-elements/notifications/aang.jpg"
+      "media_img": "string"
     },
     {
         "user_id": 2,
