@@ -55,7 +55,7 @@ const Options = () => {
                 <FormControlLabel
                     label="Technology/Science"
                     value='technology/science'
-                    control={<Checkbox color='secondary' checked={options.includes('stock')} onChange={handleOptionChange} />}   
+                    control={<Checkbox color='secondary' checked={options.includes('technology/science')} onChange={handleOptionChange} />}   
                 />
             </FormGroup>
         </FormControl>
