@@ -17,8 +17,17 @@ const Profile = () => {
             <Typography sx={{ textAlign: 'center', fontFamily: 'Libre Baskerville', marginTop:"-75px", marginLeft:"100px",}} variant="h5" component="h5">
                 Profile 
             </Typography>
-            <Typography sx={{fontFamily: 'Arial', fontSize: 25, marginTop:"20px", marginLeft:"15px"}} variant="h5" component="h5">
+
+            <Typography sx={{fontFamily: 'Arial'}} variant="subtitle2" gutterBottom>
+                Name:    
+            </Typography>
+            
+            <Typography sx={{fontFamily: 'Arial', fontSize: 25, marginTop:"10px", marginLeft:"15px"}} variant="h5" component="h5">
                 {userVal.userName_first} {userVal.userName_last}    
+            </Typography>
+
+            <Typography sx={{fontFamily: 'Arial'}} variant="subtitle2" gutterBottom>
+                Email    
             </Typography>
 
             <Typography sx={{fontFamily: 'Arial', fontSize: 20, marginTop:"10px", marginLeft:"15px"}} variant="h5" component="h5">

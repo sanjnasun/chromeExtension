@@ -7,34 +7,32 @@ import Box from '@mui/material/Box';
 
 const Notifications = () => {
 
+    const notif: ArticleValues[] = data;
     
-    const notif:ArticleValues[] = data;
     const openNewTab = () => {
-        // Open a new tab with the URL of the newTab component
-        window.open('/new-tab', '_blank');
+        // Open a new tab with the URL of your React app
+        window.open('https://your-react-app-url.com', '_blank');
     };
 
     return (
-        <div> 
-            <Typography align="center" sx={{ textAlign: 'center', fontFamily: 'Libre Baskerville'}} variant="body1" gutterBottom>
-
-            Notifications 
+        <div>
+            <Typography align="center" sx={{ textAlign: 'center', fontFamily: 'Libre Baskerville' }} variant="body1" gutterBottom>
+                Notifications
             </Typography>
-            {notif.map((item) => (
+
+            {notif.slice(0, 2).map((item) => (
                 <NotifBox
-                    article = {item}
+                    key={item.media_id}
+                    article={item}
                 />
             ))}
 
-        <Box textAlign='center'>
-            <Button variant="contained" size="small" className='buttonDown' onClick={openNewTab}>
-                View
-            </Button>
-        </Box>
-
+            <Box textAlign='center'>
+                <Button variant="contained" size="small" className='buttonDown' onClick={openNewTab}>
+                    View
+                </Button>
+            </Box>
         </div>
-        
-        
     );
 };
 

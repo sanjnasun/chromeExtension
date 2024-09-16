@@ -14,12 +14,13 @@ export interface Preferences{ //options
 }
 
 export interface ArticleValues{ //notifs page
-    user_id: number,
-    media_id: number,
-    link: string,
+    user_id: number | null,
+    link: string ,
     media_name: string,
-    media_type_id: number
+    media_type_id: number | null
     media_img: string; //demo the path
+    media_id: number | null
+    //date?
 }
 
 
