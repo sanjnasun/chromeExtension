@@ -8,8 +8,11 @@ import Box from '@mui/material/Box';
 const Notifications = () => {
 
     
-const notif:ArticleValues[] = data;
-
+    const notif:ArticleValues[] = data;
+    const openNewTab = () => {
+        // Open a new tab with the URL of the newTab component
+        window.open('/new-tab', '_blank');
+    };
 
     return (
         <div> 
@@ -24,7 +27,9 @@ const notif:ArticleValues[] = data;
             ))}
 
         <Box textAlign='center'>
-            <Button variant="contained" size="small" className='buttonDown'>View</Button>
+            <Button variant="contained" size="small" className='buttonDown' onClick={openNewTab}>
+                View
+            </Button>
         </Box>
 
         </div>

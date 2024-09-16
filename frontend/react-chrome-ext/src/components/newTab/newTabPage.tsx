@@ -1,7 +1,15 @@
 import { Box, IconButton, Container } from '@mui/material';
+import { Typography } from '@mui/material';
 
 
-const NewTab = () =>
+const NewTabPage = () =>
 {
-    return (<div></div>)
+    return (
+        <div>
+            <Typography align="center" sx={{ textAlign: 'center', fontFamily: 'Libre Baskerville'}} variant="body1" gutterBottom>
+                Recommended Articles
+            </Typography>
+        </div>
+    );
 }
+export default NewTabPage; 
