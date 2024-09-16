@@ -8,22 +8,20 @@ const userVal: UserValues = userData as UserValues;
 const Profile = () => {
     return (
         <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            textAlign="center"
+            // display="flex"
+            // flexDirection="column"
+            // alignItems="center"
+            // justifyContent="center"
+            // textAlign="center"
         >
-            <Typography variant="h5" gutterBottom>
-                Profile
+            <Typography sx={{ textAlign: 'center', fontFamily: 'Libre Baskerville', marginTop:"-75px", marginLeft:"100px",}} variant="h5" component="h5">
+                Profile 
+            </Typography>
+            <Typography sx={{fontFamily: 'Arial', fontSize: 25, marginTop:"20px", marginLeft:"15px"}} variant="h5" component="h5">
+                {userVal.userName_first} {userVal.userName_last}    
             </Typography>
 
-            <Typography variant="subtitle1" gutterBottom>
-                {userVal.userName_first} {userVal.userName_last}
-                
-            </Typography>
-
-            <Typography variant="body1" gutterBottom>
+            <Typography sx={{fontFamily: 'Arial', fontSize: 20, marginTop:"10px", marginLeft:"15px"}} variant="h5" component="h5">
                 {userVal.user_email}
             </Typography>
         </Box>

@@ -28,9 +28,9 @@ const Options = () => {
             <FormGroup 
                 sx={{ 
                     display: 'grid', 
-                    gridTemplateColumns: 'repeat(2, 1fr)', 
-                    marginLeft:2,
-                    gap: 1  // Adjust gap between items if needed
+                    gridTemplateColumns: 'repeat(2, 3fr)', 
+                    marginLeft: 0.75,
+                    gap: '0.25rem'  // Adjust gap between items if needed
                 }} 
             >
                 <FormControlLabel
@@ -48,14 +48,14 @@ const Options = () => {
                     control={<Checkbox color='secondary' checked={options.includes('usc')} onChange={handleOptionChange} />}   
                 />
                 <FormControlLabel
-                    label="Politics"
-                    value='politics'
-                    control={<Checkbox color='secondary' checked={options.includes('politics')} onChange={handleOptionChange} />}   
-                />
-                <FormControlLabel
                     label="Technology/Science"
                     value='technology/science'
                     control={<Checkbox color='secondary' checked={options.includes('technology/science')} onChange={handleOptionChange} />}   
+                />
+                <FormControlLabel
+                    label="Politics"
+                    value='politics'
+                    control={<Checkbox color='secondary' checked={options.includes('politics')} onChange={handleOptionChange} />}   
                 />
             </FormGroup>
         </FormControl>
