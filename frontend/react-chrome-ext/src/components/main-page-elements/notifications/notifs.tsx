@@ -11,7 +11,7 @@ const Notifications = () => {
     
     const openNewTab = () => {
         // Open a new tab with the URL of your React app
-        window.open('https://your-react-app-url.com', '_blank');
+        window.open('http://localhost:3000/', '_blank');
     };
 
     return (
